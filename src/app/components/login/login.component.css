@@ -1,0 +1,30 @@
+.login {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    /* background-image: url('https://drive.google.com/uc?export=view&id=1TZYCIROKXReozXnQ13anp1U5rjKhlILP');
+     background-size: cover;
+    background-position: center; */ 
+    width: 25%;
+    position: relative;
+    top: 1%;
+   
+  }
+  
+  .login-heading {
+    font-weight: 300;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+  .text-center{
+    position: relative;
+    left: 35%;
+  }
+  .button{
+    border-radius: 20px;
+  }

@@ -1,0 +1,81 @@
+<div class="container-fluid ps-md-0">
+  <div class="row g-0">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="text-center">
+
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate class="d-flex-center">
+              <div class="example-container">
+
+                <!-- <div> 
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input  matInput  placeholder="First name" formControlName="Firstname" name="fname"  required>
+                 </mat-form-field>
+                 <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input  matInput  placeholder="Last Name" formControlName="Lastname" name="lname"  required>
+                 </mat-form-field>
+                </div> -->
+
+                <div>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="userID">
+                    <mat-error
+                      *ngIf="!signupForm.get('userID')?.errors?.required && (signupForm.get('userID')?.errors?.pattern)">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error
+                      *ngIf="signupForm.get('userID')?.invalid && (signupForm.get('userID')?.dirty || signupForm.get('userID')?.touched) && signupForm.get('userID')?.errors?.required">
+                      Email is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="mt-top-2">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" placeholder="Password" formControlName="password">
+                    <mat-error *ngIf="!signupForm.get('password')?.errors?.required">
+                      Password length must be greater than or equal to 8 and password must contain one or more uppercase
+                      , lowercase , numeric and special characters
+                    </mat-error>
+                    <mat-error
+                      *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) && signupForm.get('password')?.errors?.required">
+                      Password is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <!-- .............. -->
+                
+                <!-- .............. -->
+                <div>
+                  <section class="example-section">
+                    <mat-checkbox class="example-margin">Terms and Conditions</mat-checkbox>
+                  </section>
+                </div>
+                <div class="mt-top">
+                  <button mat-raised-button color="primary" mat-button class="button">Sign In</button>
+                </div>
+                <br>
+                <div>
+                  <p style="position:relative;left: 20%;">OR</p>
+                  <button mat-raised-button color="primary" mat-button class="mat"
+                    style="position: absolute;left: 15%;border-radius: 20px;"><b> F facebook</b></button>
+                  <button mat-raised-button color="warn" mat-button class="mats"
+                    style="position: absolute;left: 100%; border-radius: 20px;"><b> G google+</b></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
